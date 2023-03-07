@@ -455,7 +455,7 @@ int main( void )
         	ObjectMenu2();
         }
         if (show_Object_List) {
-        	ObjectList(&object);
+        	ObjectList(&objects);
         }
         if (show_Object_Menu) {
         	ObjectMenu();
@@ -555,7 +555,7 @@ int main( void )
 
 		// Draw the triangle !
 
-		for (unsigned int i = 0; i < object.size(); i++) {
+		for (unsigned int i = 0; i < objects.size(); i++) {
 		
 			if (objects.size() == 0) {
 				break;
@@ -563,14 +563,14 @@ int main( void )
 		// 	// render said object
 		// 	// object[i].update_dimensions();
 			// MatrixStuff(false, object.at(i).x, object.at(i).y, object.at(i).z);
-			MatrixStuff(object.at(i).x, object.at(i).y, object.at(i).z);
+			MatrixStuff(objects.at(i).x, objects.at(i).y, objects.at(i).z);
 			// MatrixStuff(false, object.at(i));
 			glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &mvp[0][0]);
 
 			if (is3D) {
-				GLCall(rend.Draw(object.at(i).va_3D, *(object.at(i).ib_3D) ));
+				GLCall(rend.Draw(objects.at(i).va_3D, *(objects.at(i).ib_3D) ));
 			} else {
-				GLCall(rend.Draw(object.at(i).va_2D, *(object.at(i).ib_2D) ));
+				GLCall(rend.Draw(objects.at(i).va_2D, *(objects.at(i).ib_2D) ));
 			}
 		// 	// rend.Draw(object.at(i).va_2D, (object.at(i).ib_2D) );
 		// 	// rend.Draw(va, ib);
