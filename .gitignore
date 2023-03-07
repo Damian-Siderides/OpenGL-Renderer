@@ -1,0 +1,11 @@
+# Main
+main
+
+# Object Files
+*.o
+
+# Imgui ini
+imgui.ini
+
+# Old
+old/

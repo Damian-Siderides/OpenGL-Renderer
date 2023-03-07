@@ -1,0 +1,31 @@
+#version 330 core
+
+in vec3 fragmentColor;
+// out vec3 color;
+out vec3 color;
+
+in vec2 coord;
+
+// in vec2 gl_PointCoord;
+// in vec2 gl_PointCoord ; 
+uniform vec4 u_Color;
+
+void main() {
+
+
+    // color = vec3(1,0,0);
+    // color = noise3(12);
+    // color = vec4(0.0, 0.0, 1.0, 1.0);
+
+    // color = u_Color;
+
+
+    color = fragmentColor;
+    // color = vec3(1, 0, 0);
+
+    // color = vec3(gl_PointCoord.x, gl_PointCoord.y, 1.0);
+
+	// color = coord;
+
+    // color = fragmentColor; // uncomment for 3D thing
+}
