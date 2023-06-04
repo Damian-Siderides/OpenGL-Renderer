@@ -3,8 +3,8 @@
 A 2D and 3D OpenGL Renderer.
 
 ![image1](images/image1.png)
-![image2](images/image1.png)
-![image3](images/image1.png)
+![image2](images/image2.png)
+![image3](images/image3.png)
 
 ## Controls
 
